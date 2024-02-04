@@ -11,11 +11,17 @@ class BasePage():
     def __init__(self, driver):
         self.driver = driver
 
-    def get_element(self, by_locator):
-        return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))
+    def xpath_to_tuple(self, xpath):
+        return (By.XPATH, xpath)
 
-    def click(self, by_locator):
-        self.get_element(by_locator).click()
+    def get_element(self, xpath):
+        return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.xpath_to_tuple(xpath)))
 
-    def get_current_url(self):
+    def click(self, xpath):
+        self.get_element(xpath).click()
+
+    def get_page_title(self):
         return self.driver.title
+    
+    def get_current_url(self):
+        return self.driver.current_url

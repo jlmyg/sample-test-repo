@@ -13,4 +13,13 @@ class TestNavigation(BaseTest):
 
         home_page = HomePageFunctions(self.driver)
 
-        assert home_page.get_current_url() == "DEMOQA"
+        assert home_page.get_page_title() == "DEMOQA"
+
+    def test_navigate_to_elements(self):
+        """ The happy flow of navigating to DemoQA Website - Elements Page"""
+
+        home_page = HomePageFunctions(self.driver)
+
+        home_page.navigate_to_elements()
+        
+        assert home_page.get_current_url() == "https://demoqa.com/elements"
