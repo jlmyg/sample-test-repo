@@ -3,3 +3,4 @@ __pycache__/
 *.html
 output.json
 reports/screenshots/*.png
+reports/archive/
