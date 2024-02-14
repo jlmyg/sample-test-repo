@@ -4,3 +4,4 @@ output.json
 tests/reports/screenshots/*.png
 tests/reports/archive/
 tests/reports/*.html
+tests/reports/tests.log
