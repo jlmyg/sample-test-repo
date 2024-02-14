@@ -1,6 +1,6 @@
 __pycache__/
 .pytest_cache/
-*.html
 output.json
-reports/screenshots/*.png
-reports/archive/
+tests/reports/screenshots/*.png
+tests/reports/archive/
+tests/reports/*.html
