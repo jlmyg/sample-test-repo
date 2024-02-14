@@ -2,8 +2,7 @@
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC 
-
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage():
@@ -22,6 +21,6 @@ class BasePage():
 
     def get_page_title(self):
         return self.driver.title
-    
+
     def get_current_url(self):
         return self.driver.current_url
