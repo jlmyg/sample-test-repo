@@ -8,7 +8,13 @@ from tests.e2e.configurations.logger import LogGen
 
 logger = LogGen.loggen()
 
-class BasePage():
+class BaseElements():
+    """This class contains repeated generic elements from demoQA
+    """
+
+    page_main_header = "//div[@class='main-header']"
+
+class BasePage(BaseElements):
 
     def __init__(self, driver):
         self.driver = driver
@@ -42,3 +48,14 @@ class BasePage():
 
     def send_keys(self, xpath, string):
         self.get_element(xpath).send_keys(string)
+
+    def get_main_header_text(self):
+        return self.get_element(BaseElements.page_main_header).text
+
+    def is_visible(self, xpath):
+
+        try:
+            return bool(self.get_element(xpath))
+        except TimeoutException:
+            self.error_log('element {} is not visible'.format(xpath))
+            return False
