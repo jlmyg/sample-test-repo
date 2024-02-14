@@ -24,3 +24,6 @@ class BasePage():
 
     def get_current_url(self):
         return self.driver.current_url
+
+    def send_keys(self, xpath, string):
+        self.get_element(xpath).send_keys(string)
