@@ -8,3 +8,5 @@
 
 
 ### Additionally, you can also install python through pyenv which helps manage your python version in the long run. You can check it through https://github.com/pyenv/pyenv?tab=readme-ov-file
+
+### TODO: Add docker capabilities for running the tests

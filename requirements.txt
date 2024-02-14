@@ -1,6 +1,7 @@
 #   Dependencies for the test suite
 
+Faker==23.1.0
 pytest==8.0.0
-pytest-html-reporter == 0.2.9
+pytest-html-reporter==0.2.9
 selenium==4.17.2
 webdriver-manager==4.0.1
